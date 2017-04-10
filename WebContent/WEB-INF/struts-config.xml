@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources>
+  </data-sources>
+  <form-beans>
+  	<form-bean name="UsuariosForm" type="org.ceeci.controlieweb.form.UsuariosForm" />
+  </form-beans>
+  <global-forwards>
+  </global-forwards>
+  
+  <action-mappings>
+  		<action path="/UsuariosAction"
+  				name="UsuariosForm"  
+				type="org.ceeci.controlieweb.action.UsuariosAction">
+		    <forward name="exito" 	path="/jsp/usuarios.jsp" 	redirect="false" />
+		   	<forward name="error"	path="/jsp/paginaError.jsp" redirect="false" />
+		</action>
+		<action path="/UsuariosGuardarAction"
+  				name="UsuariosForm"  
+				type="org.ceeci.controlieweb.action.UsuariosAction">
+		    <forward name="exito" 	path="/jsp/usuarios.jsp" 	redirect="false" />
+		   	<forward name="error"	path="/jsp/paginaError.jsp" redirect="false" />
+		</action>
+		
+		
+		
+  </action-mappings>
+  <controller>
+  </controller>
+</struts-config>

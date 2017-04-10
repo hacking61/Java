@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="#UsuariosAction" NAME="action0"
+  PATH="/UsuariosAction" SHAPE="32,17,0,0" TITLE="UsuariosForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="exito" NAME="forward0"
+   PATH="/jsp/usuarios.jsp" TARGET="page2" TITLE="exito" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward1"
+   PATH="/jsp/paginaError.jsp" TARGET="page0" TITLE="error"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page2" PATH="/jsp/usuarios.jsp" SHAPE="448,17,0,0"
+  SUBTYPE="jsp" TITLE="usuarios.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/usuariosGuardarAction.do"
+   SUBTYPE="confirmed" TARGET="action2"
+   TITLE="/usuariosGuardarAction.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page0" PATH="/jsp/paginaError.jsp"
+  SHAPE="240,17,0,0" SUBTYPE="jsp" TITLE="paginaError.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#UsuariosGuardarAction" NAME="action1"
+  PATH="/UsuariosGuardarAction" SHAPE="656,17,0,0" TITLE="UsuariosForm"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward0"
+   PATH="/jsp/paginaError.jsp" TARGET="page0" TITLE="error"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="exito" NAME="forward1"
+   PATH="/jsp/usuarios.jsp" TARGET="page2" TITLE="exito" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#usuariosGuardarAction" NAME="action2"
+  PATH="/usuariosGuardarAction" SHAPE="656,129,0,0" SUBTYPE="unknown"
+  TYPE="action" model-entity="StrutsProcessItem"/>
+</PROCESS>
